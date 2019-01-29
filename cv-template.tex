@@ -119,6 +119,10 @@ $endif$
 \providecommand{\tightlist}{%
 	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
+% Command for margin changes
+\def\changemargin#1{\list{}{\rightmargin#1\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist
+	
 %------------------------------------------------------------------------------
 
 $if(highlighting-macros)$
