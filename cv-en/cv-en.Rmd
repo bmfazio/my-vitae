@@ -12,18 +12,13 @@ date: "`r Sys.setlocale('LC_ALL','English');format(Sys.time(), '%B %Y')`"
 output: (function (...) {;template <- here::here("cv-template.tex");vitae::cv_document(..., template = template, citation_package = "biblatex",latex_engine = "xelatex")})
 ---
 
-#
-
-\begin{changemargin}{1.5cm}
-asi que aqui podria hacer una gran descripcion de todos mis logros de la vida y etceras mas propicios de un junco talado en tropical meseta del olvido lejano
-\end{changemargin}
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
 library(tidyverse)
 
-limape <- "Lima, Perú"
+#limape <- "Lima, Perú"
+limape <- NA
 pucp <- "Pontificia Universidad Católica del Perú"
 upch <- "Universidad Peruana Cayetano Heredia"
 unicef <- "UNICEF"
@@ -66,6 +61,11 @@ tribble(
   "Data Analyst (Contractor)", midis, limape, "Dec. 2017 - Feb. 2018",
   "Implemented automated reports for monitoring of health interventions",
   
+  "Teaching Assistant", paste(faspa, "--", upch), limape, "Mar. 2017 - Dec. 2017",
+  "Tutoring for graduate-level Biostatistics and Epidemiology courses",
+  "Teaching Assistant", paste(faspa, "--", upch), limape, "Mar. 2017 - Dec. 2017",
+  "Helped graduate students define a research question and design an analysis plan",
+  
   "Research Assistant", paste(faspa, "--", upch), limape, "Dec. 2014 - Dec. 2016",
   "Generated periodic reports and recommendations to minimize entry errors for ongoing studies",
   "Research Assistant", paste(faspa, "--", upch), limape, "Dec. 2014 - Dec. 2016",
@@ -87,19 +87,34 @@ tribble(
 tribble(
   ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
   m_stat, pucp, limape, m_stat.date,
-  NA,
-  #m_stat, pucp, limape, m_stat.date,
-  #"cursos?",
+  "Thesis pending review, coursework complete (Rank: 1/38)",
   m_epid, upch, limape, m_epid.date,
-  NA,
+  "Masters coursework complete",
   b_biol, upch, limape, b_biol.date,
   NA
 ) %>% 
-  detailed_entries(degree, dates, uni, loc, details)
+  detailed_entries(uni, dates, degree, loc, details)
 ```
 
-# Some stuff about me
+# Skills
 
- * I poisoned myself doing research.
- * I was the first woman to win a Nobel prize
- * I was the first person and only woman to win a Nobel prize in two different sciences. 
+\begin{cvskills}
+\cvskill{Data analysis}{Hierarchical models, survival analysis, structural equation modeling, survey analysis and design}
+\cvskill{Programming}{R, SQL, Python, JavaScript}
+\cvskill{Languages}{Spanish, English}
+\end{cvskills}
+
+\pagebreak
+
+# Publications
+
+```{r}
+tribble(
+  ~ details,
+  "\\textbf{Allan-Blitz LT et al.} \\textit{The Development of an Online Risk Calculator for the Prediction of Future Syphilis among a High-Risk Cohort of Men Who Have Sex with Men and Transgender Women in Lima, Peru.} Sexual Health, 2018.",
+  "\\textbf{García PJ et al.} \\textit{Sexual health knowledge and practices and STI/HIV prevalence among long-distance truck drivers in Peru.} SAGE Open Medicine, 2017.",
+  "\\textbf{Egoavil MS et al.} \\textit{Qualitative Study for the Development of a Telemedicine System in Palliative Care.} Palliative Medicine and Hospice Care, 2017."
+) %>%
+  brief_entries(what = details, .protect = FALSE)
+  #detailed_entries(why = details, .protect = FALSE)
+```
