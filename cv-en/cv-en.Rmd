@@ -5,7 +5,7 @@ address: "Quantitative methods for public health and biomedical research"
 phone: +51 987 807 758
 www: bmfazio.github.io
 email: "boris.fazio@outlook.com"
-#twitter: mariecurie
+#twitter: bmfazio
 github: bmfazio
 linkedin: bmfazio
 date: "`r Sys.setlocale('LC_ALL','English');format(Sys.time(), '%B %Y')`"
@@ -33,7 +33,7 @@ midis <- "Ministerio de Desarrollo e Inclusión Social"
 faspa <- "Facultad de Salud Pública y Administración"
 
 m_stat <- "Masters in Statistics"
-m_stat.date <- "Mar. 2017 - Dec. 2018"
+m_stat.date <- "Mar. 2017 - "
 m_epid <- "Graduate studies in Epidemiological Research"
 m_epid.date <- "Mar. 2015 - Dec. 2015"
 b_biol <- "BSc in Biology"
@@ -47,16 +47,32 @@ b_biol.date <- "Mar. 2009 - Dec. 2014"
 ```{r}
 tribble(
   ~ position, ~ company, ~ loc, ~ dates, ~ details,
-  "Contractor", unicef, limape, "Aug. 2018 -",
-  NA,
+  "Measurement Analyst (Contractor)", unicef, limape, "Aug. 2018 -",
+  "Integrated data from national surveys and administrative databases to enable calculation of well-being indicators",
+  "Measurement Analyst (Contractor)", unicef, limape, "Aug. 2018 -",
+  "Implemented a reproducible pipeline for data processing and reporting",
+  "Measurement Analyst (Contractor)", unicef, limape, "Aug. 2018 -",
+  "Conducted a review of published literature on the measurement of adolescent well-being",
+  
   "Data Analyst", minsa, limape, "Oct. 2016 - May. 2018",
-  NA,
+  "Leveraged data from multiple administrative databases to identify over 100 000 children with incomplete anemia treatment",
+  "Data Analyst", minsa, limape, "Oct. 2016 - May. 2018",
+  "Led redesign of KPI monitoring application, offloading data entry tasks from our five person team to over 200 counterparts countrywide",
+  "Data Analyst", minsa, limape, "Oct. 2016 - May. 2018",
+  "Provided statistical support on sampling schemes and sample size selection for national surveys",
+  "Data Analyst", minsa, limape, "Oct. 2016 - May. 2018",
+  "Advised on operational definitions of KPIs for health interventions",
+  
   "Contractor", midis, limape, "Dec. 2017 - Feb. 2018",
-  NA,
+  "Implemented automated reports for monitoring of health interventions",
+  
   "Research Assistant", paste(faspa, "--", upch), limape, "Dec. 2014 - Dec. 2016",
-  NA,
+  "Generated periodic reports and recommendations to minimize entry errors for ongoing studies",
+  "Research Assistant", paste(faspa, "--", upch), limape, "Dec. 2014 - Dec. 2016",
+  "Provided logistics support for other researchers",
+  
   "Data Manager", ciisss, limape, "Sep. 2015 - Oct. 2016",
-  NA
+  "retention analysis"
 ) %>% 
   detailed_entries(company, dates, position, loc, details)
 ```
