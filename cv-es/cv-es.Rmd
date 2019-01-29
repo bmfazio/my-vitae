@@ -1,0 +1,120 @@
+---
+name: Boris Fazio
+position: "Data Analyst"
+address: "Quantitative methods for public health and biomedical research"
+phone: +51 987 807 758
+www: bmfazio.github.io
+email: "boris.fazio@outlook.com"
+#twitter: bmfazio
+github: bmfazio
+linkedin: bmfazio
+date: "`r Sys.setlocale('LC_ALL','English');format(Sys.time(), '%B %Y')`"
+output: (function (...) {;template <- here::here("cv-template.tex");vitae::cv_document(..., template = template, citation_package = "biblatex",latex_engine = "xelatex")})
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tidyverse)
+
+#limape <- "Lima, Perú"
+limape <- NA
+pucp <- "Pontificia Universidad Católica del Perú"
+upch <- "Universidad Peruana Cayetano Heredia"
+unicef <- "UNICEF"
+ciisss <- "Centro de Investigación Interdisciplinaria en Sexualidad, Sida y Sociedad"
+minsa <- "Ministerio de Salud"
+midis <- "Ministerio de Desarrollo e Inclusión Social"
+faspa <- "Facultad de Salud Pública y Administración"
+
+m_stat <- "Masters in Statistics"
+m_stat.date <- "Mar. 2017 - "
+m_epid <- "Graduate studies in Epidemiological Research"
+m_epid.date <- "Mar. 2015 - Dec. 2015"
+b_biol <- "BSc in Biology"
+b_biol.date <- "Mar. 2009 - Dec. 2014"
+
+
+```
+
+# Experience
+
+```{r}
+tribble(
+  ~ position, ~ company, ~ loc, ~ dates, ~ details,
+  "Measurement Analyst (Contractor)", unicef, limape, "Aug. 2018 -",
+  "Integrated data from national surveys and administrative databases to enable calculation of well-being indicators",
+  "Measurement Analyst (Contractor)", unicef, limape, "Aug. 2018 -",
+  "Implemented a reproducible pipeline for data processing and reporting",
+  "Measurement Analyst (Contractor)", unicef, limape, "Aug. 2018 -",
+  "Conducted a review of published literature on the measurement of adolescent well-being",
+  
+  "Data Analyst", minsa, limape, "Oct. 2016 - May. 2018",
+  "Leveraged data from multiple administrative databases to identify over 100 000 children with incomplete anemia treatment",
+  "Data Analyst", minsa, limape, "Oct. 2016 - May. 2018",
+  "Led redesign of KPI monitoring application, offloading data entry tasks from our five person team to over 200 counterparts countrywide",
+  "Data Analyst", minsa, limape, "Oct. 2016 - May. 2018",
+  "Provided statistical support on sampling schemes and sample size selection for national surveys",
+  "Data Analyst", minsa, limape, "Oct. 2016 - May. 2018",
+  "Advised on operational definitions of KPIs for health interventions",
+  
+  "Data Analyst (Contractor)", midis, limape, "Dec. 2017 - Feb. 2018",
+  "Implemented automated reports for monitoring of health interventions",
+  
+  "Teaching Assistant", paste(faspa, "--", upch), limape, "Mar. 2017 - Dec. 2017",
+  "Tutoring for graduate-level Biostatistics and Epidemiology courses",
+  "Teaching Assistant", paste(faspa, "--", upch), limape, "Mar. 2017 - Dec. 2017",
+  "Helped graduate students define a research question and design an analysis plan",
+  
+  "Research Assistant", paste(faspa, "--", upch), limape, "Dec. 2014 - Dec. 2016",
+  "Generated periodic reports and recommendations to minimize entry errors for ongoing studies",
+  "Research Assistant", paste(faspa, "--", upch), limape, "Dec. 2014 - Dec. 2016",
+  "Provided logistics support for other researchers",
+  
+  "Data Manager", ciisss, limape, "Sep. 2015 - Oct. 2016",
+  "Automated retention analysis reports for cohort study",
+  "Data Manager", ciisss, limape, "Sep. 2015 - Oct. 2016",
+  "Advised colleagues on statistical methods for study analysis",
+  "Data Manager", ciisss, limape, "Sep. 2015 - Oct. 2016",
+  "Cleaned data and improved documentation for existing procedures"
+) %>% 
+  detailed_entries(company, dates, position, loc, details)
+```
+
+# Education
+
+```{r}
+tribble(
+  ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
+  m_stat, pucp, limape, m_stat.date,
+  "Thesis pending review, coursework complete (Rank: 1/38)",
+  m_epid, upch, limape, m_epid.date,
+  "Masters coursework complete",
+  b_biol, upch, limape, b_biol.date,
+  NA
+) %>% 
+  detailed_entries(uni, dates, degree, loc, details)
+```
+
+# Skills
+
+\begin{cvskills}
+\cvskill{Data analysis}{Hierarchical models, survival analysis, structural equation modeling, survey analysis and design}
+\cvskill{Programming}{R, SQL, Python, JavaScript}
+\cvskill{Languages}{Spanish, English}
+\end{cvskills}
+
+\pagebreak
+
+# Publications
+
+```{r}
+tribble(
+  ~ details,
+  "\\textbf{Allan-Blitz LT et al.} \\textit{The Development of an Online Risk Calculator for the Prediction of Future Syphilis among a High-Risk Cohort of Men Who Have Sex with Men and Transgender Women in Lima, Peru.} Sexual Health, 2018.",
+  "\\textbf{García PJ et al.} \\textit{Sexual health knowledge and practices and STI/HIV prevalence among long-distance truck drivers in Peru.} SAGE Open Medicine, 2017.",
+  "\\textbf{Egoavil MS et al.} \\textit{Qualitative Study for the Development of a Telemedicine System in Palliative Care.} Palliative Medicine and Hospice Care, 2017."
+) %>%
+  brief_entries(what = details, .protect = FALSE)
+  #detailed_entries(why = details, .protect = FALSE)
+```
