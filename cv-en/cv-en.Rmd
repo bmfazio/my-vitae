@@ -63,7 +63,7 @@ tribble(
   "Data Analyst", minsa, limape, "Oct. 2016 - May. 2018",
   "Advised on operational definitions of KPIs for health interventions",
   
-  "Contractor", midis, limape, "Dec. 2017 - Feb. 2018",
+  "Data Analyst (Contractor)", midis, limape, "Dec. 2017 - Feb. 2018",
   "Implemented automated reports for monitoring of health interventions",
   
   "Research Assistant", paste(faspa, "--", upch), limape, "Dec. 2014 - Dec. 2016",
@@ -72,7 +72,11 @@ tribble(
   "Provided logistics support for other researchers",
   
   "Data Manager", ciisss, limape, "Sep. 2015 - Oct. 2016",
-  "retention analysis"
+  "Automated retention analysis reports for cohort study",
+  "Data Manager", ciisss, limape, "Sep. 2015 - Oct. 2016",
+  "Advised colleagues on statistical methods for study analysis",
+  "Data Manager", ciisss, limape, "Sep. 2015 - Oct. 2016",
+  "Cleaned data and improved documentation for existing procedures"
 ) %>% 
   detailed_entries(company, dates, position, loc, details)
 ```
