@@ -1,7 +1,7 @@
 ---
 name: Boris Fazio
-position: "Professor"
-address: "School of Physics & Chemistry, École Normale Supérieure"
+position: "Data Analyst"
+address: "Quantitative methods for public health and biomedical research"
 phone: +51 987 807 758
 www: bmfazio.github.io
 email: "boris.fazio@outlook.com"
