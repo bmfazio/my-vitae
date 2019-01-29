@@ -8,7 +8,7 @@ email: "boris.fazio@outlook.com"
 #twitter: mariecurie
 github: bmfazio
 linkedin: bmfazio
-date: "`r format(Sys.time(), '%B %Y')`"
+date: "`r Sys.setlocale('LC_ALL','English');format(Sys.time(), '%B %Y')`"
 output: (function (...) {;template <- here::here("cv-template.tex");vitae::cv_document(..., template = template, citation_package = "biblatex",latex_engine = "xelatex")})
 ---
 
