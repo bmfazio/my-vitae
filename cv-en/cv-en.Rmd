@@ -12,22 +12,67 @@ date: "`r Sys.setlocale('LC_ALL','English');format(Sys.time(), '%B %Y')`"
 output: (function (...) {;template <- here::here("cv-template.tex");vitae::cv_document(..., template = template, citation_package = "biblatex",latex_engine = "xelatex")})
 ---
 
+\section{}
+
+well howdy there **partner**
+
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
 library(tidyverse)
+
+limape <- "Lima, Perú"
+pucp <- "Pontificia Universidad Católica del Perú"
+upch <- "Universidad Peruana Cayetano Heredia"
+unicef <- "UNICEF"
+ciisss <- "Centro de Investigación Interdisciplinaria en Sexualidad, Sida y Sociedad"
+minsa <- "Ministerio de Salud"
+midis <- "Ministerio de Desarrollo e Inclusión Social"
+faspa <- "Facultad de Salud Pública y Administración"
+
+m_stat <- "Masters in Statistics"
+m_stat.date <- "Mar. 2017 - Dec. 2018"
+m_epid <- "Graduate studies in Epidemiological Research"
+m_epid.date <- "Mar. 2015 - Dec. 2015"
+b_biol <- "BSc in Biology"
+b_biol.date <- "Mar. 2009 - Dec. 2014"
+
+
+```
+
+# Experience
+
+```{r}
+tribble(
+  ~ position, ~ company, ~ loc, ~ dates, ~ details,
+  "Contractor", unicef, limape, "Aug. 2018 -",
+  NA,
+  "Data Analyst", minsa, limape, "Oct. 2016 - May. 2018",
+  NA,
+  "Contractor", midis, limape, "Dec. 2017 - Feb. 2018",
+  NA,
+  "Research Assistant", paste(faspa, "--", upch), limape, "Dec. 2014 - Dec. 2016",
+  NA,
+  "Data Manager", ciisss, limape, "Sep. 2015 - Oct. 2016",
+  NA
+) %>% 
+  detailed_entries(company, dates, position, loc, details)
 ```
 
 # Education
+
 ```{r}
 tribble(
   ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
-  "BCom (Hons) in Econometrics", "Monash University", "Clayton, Australia", "Mar. 2017 - Nov. 2017", "GPA of 3.875, WAM of 86.625",
-  "BCom (Hons) in Econometrics", "Monash University", "Clayton, Australia", "Mar. 2017 - Nov. 2017", "Best in class for: Advanced statistical modelling (ETC3580), Bayesian time series econometrics (ETC4541), Applied econometrics 2 (ETC4410), Advanced topics in computational science (FIT4012), Honours Research Project (ETC4860)",
-  "BCom in Econometrics, BSc in Mathematical statistics and Computational Science", "Monash University", "Clayton, Australia", "Mar. 2013 - Nov. 2016", "GPA of 3.688, WAM of 85.385",
-  "BCom in Econometrics, BSc in Mathematical statistics and Computational Science", "Monash University", "Clayton, Australia", "Mar. 2013 - Nov. 2016", "Mentored in the Access Monash Ambassador Program (2015 and 2016)",
-  "BCom in Econometrics, BSc in Mathematical statistics and Computational Science", "Monash University", "Clayton, Australia", "Mar. 2013 - Nov. 2016", "Participated in the Vice-Chancellor's Ancora Imparo Student Leadership Program (2014)",
-  "BCom in Econometrics, BSc in Mathematical statistics and Computational Science", "Monash University", "Clayton, Australia", "Mar. 2013 - Nov. 2016", "Best in class for: Business analytics (ETC3450), Business forecasting (ETC2450), Algorithms and data structures (FIT2004), Time series analysis for business and economics (ETC3450)"
+  m_stat, pucp, limape, m_stat.date,
+  NA,
+  #m_stat, pucp, limape, m_stat.date,
+  #"cursos?",
+  m_epid, upch, limape, m_epid.date,
+  NA,
+  b_biol, upch, limape, b_biol.date,
+  NA
 ) %>% 
   detailed_entries(degree, dates, uni, loc, details)
 ```
