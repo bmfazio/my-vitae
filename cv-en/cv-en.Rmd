@@ -12,10 +12,9 @@ date: "`r Sys.setlocale('LC_ALL','English');format(Sys.time(), '%B %Y')`"
 output: (function (...) {;template <- here::here("cv-template.tex");vitae::cv_document(..., template = template, citation_package = "biblatex",latex_engine = "xelatex")})
 ---
 
-\section{}
+#
 
 well howdy there **partner**
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
