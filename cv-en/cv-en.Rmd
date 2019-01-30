@@ -27,7 +27,7 @@ minsa <- "Ministerio de Salud"
 midis <- "Ministerio de Desarrollo e Inclusión Social"
 faspa <- "Facultad de Salud Pública y Administración"
 
-m_stat <- "Masters in Statistics"
+m_stat <- "Magister in Statistics"
 m_stat.date <- "Mar. 2017 - "
 m_epid <- "Graduate studies in Epidemiological Research"
 m_epid.date <- "Mar. 2015 - Dec. 2015"
