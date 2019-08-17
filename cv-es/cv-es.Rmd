@@ -8,7 +8,7 @@ email: "boris.fazio@outlook.com"
 #twitter: bmfazio
 github: bmfazio
 linkedin: bmfazio
-date: "`r format(Sys.time(), '%B %Y')`"
+date: "`r Sys.setlocale('LC_TIME', 'Spanish');format(Sys.time(), '%B %Y')`"
 output: (function (...) {;template <- here::here("cv-template.tex");vitae::cv_document(..., template = template, citation_package = "biblatex",latex_engine = "xelatex")})
 ---
 
@@ -28,7 +28,7 @@ midis <- "Ministerio de Desarrollo e Inclusión Social"
 faspa <- "Facultad de Salud Pública y Administración"
 
 m_stat <- "Magister en Estadística"
-m_stat.date <- "Mar. 2017 - "
+m_stat.date <- "Mar. 2017 - Jul. 2019"
 m_epid <- "Maestría en Ciencias en Investigación Epidemiológica"
 m_epid.date <- "Mar. 2015 - Dic. 2015"
 b_biol <- "Bachiller en Ciencias con mención en Biología"
@@ -42,22 +42,22 @@ b_biol.date <- "Mar. 2009 - Dic. 2014"
 ```{r}
 tribble(
   ~ position, ~ company, ~ loc, ~ dates, ~ details,
-  "Analista de medición (Consultoría)", unicef, limape, "Ago. 2018 -",
-  "Integración de datos de encuestas nacionales y bases de datos administrativas para medición de indicadores",
-  "Analista de medición (Consultoría)", unicef, limape, "Ago. 2018 -",
-  "Implementación de procedimientos reproducibles para limpieza de datos y generación de reportes",
-  "Analista de medición (Consultoría)", unicef, limape, "Ago. 2018 -",
-  "Revisión de literatura sobre medición del bienestar adolescente",
+  "Analista de medición (Consultoría)", unicef, limape, "Ago. 2018 - Jul. 2019",
+  "Integración de datos de encuestas nacionales y bases de datos administrativas",
+  "Analista de medición (Consultoría)", unicef, limape, "Ago. 2018 - Jul. 2019",
+  "Implementación de procedimientos para limpieza de datos y generación de reportes reproducibles",
+  "Analista de medición (Consultoría)", unicef, limape, "Ago. 2018 - Jul. 2019",
+  "Revisión de literatura de medición del bienestar en población adolescente",
   
   "Analista estadístico", minsa, limape, "Oct. 2016 - May. 2018",
-  "Cruce de múltiples bases administrativas, permitió identificar más de 100 000 niños con tratamiento de anemia incompleto",
-  "Analista Estadístico", minsa, limape, "Oct. 2016 - May. 2018",
-  "Participación en rediseño de aplicativo para monitoreo de indicadores de desempeño, permitió redistribuir labores de entrada de datos de nuestro equipo de cinco personas hacia más de 200 puntos de digitación a nivel nacional",
-  "Analista Estadístico", minsa, limape, "Oct. 2016 - May. 2018",
-  "Soporte estadístico en diseño de esquemas de muestreo y selección de tamaño de muestra para encuestas nacionales",
+  "Medición de adherencia al tratamiento en poblaciones selectas a través de bases administrativas",
+  "Analista estadístico", minsa, limape, "Oct. 2016 - May. 2018",
+  "Rediseño de procesos para mejorar eficiencia del ingreso de datos",
+  "Analista estadístico", minsa, limape, "Oct. 2016 - May. 2018",
+  "Diseño de encuestas y desarrollo de metodologías de muestreo para mediciones a nivel nacional",
   
   "Analista de datos (Consultoría)", midis, limape, "Dic. 2017 - Feb. 2018",
-  "Implementación de reportes automáticos para monitoreo de intervenciones de salud",
+  "Implementación de reportes automáticos para monitoreo de indicadores de un programa social",
   
   "Asistente de prácticas", paste(faspa, "--", upch), limape, "Mar. 2017 - Dic. 2017",
   "Tutorías para cursos de maestría en bioestadística y epidemiología",
@@ -65,15 +65,15 @@ tribble(
   "Apoyo a estudiantes de maestría para definir preguntas de investigación y plan de análisis",
   
   "Asistente de proyectos", paste(faspa, "--", upch), limape, "Dic. 2014 - Dic. 2016",
-  "Generación de reportes y recomendaciones periódicas para minimizar errores de registro de datos de estudios en curso",
+  "Supervisión de la calidad de datos de estudios en curso",
   "Asistente de proyectos", paste(faspa, "--", upch), limape, "Dic. 2014 - Dic. 2016",
   "Asistencia logística a investigadores",
   
-  "Administrador de datos", ciisss, limape, "Sep. 2015 - Oct. 2016",
+  "Asistente de proyectos", ciisss, limape, "Sep. 2015 - Oct. 2016",
   "Generación automática de reportes de retención para estudio de cohorte",
-  "Administrador de datos", ciisss, limape, "Sep. 2015 - Oct. 2016",
-  "Apoyo a colegas para análisis estadístico de sus estudios",
-  "Administrador de datos", ciisss, limape, "Sep. 2015 - Oct. 2016",
+  "Asistente de proyectos", ciisss, limape, "Sep. 2015 - Oct. 2016",
+  "Asesoría estadística para el desarrollo de análisis secundario de datos",
+  "Asistente de proyectos", ciisss, limape, "Sep. 2015 - Oct. 2016",
   "Limpieza de datos y mejora de la documentación de procesos"
 ) %>% 
   detailed_entries(company, dates, position, loc, details)
@@ -85,9 +85,9 @@ tribble(
 tribble(
   ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
   m_stat, pucp, limape, m_stat.date,
-  "Pendiente revisión de tesis, egresado (Puesto: 1/38)",
+  "Egresado (1.° puesto)",
   m_epid, upch, limape, m_epid.date,
-  "Egresado de maestría",
+  "Egresado",
   b_biol, upch, limape, b_biol.date,
   NA
 ) %>% 
@@ -97,8 +97,8 @@ tribble(
 # Habilidades
 
 \begin{cvskills}
-\cvskill{Análisis de datos}{Modelos jerárquicos, análisis de sobrevivencia, modelamiento con ecuaciones estructurales, análisis y diseño de encuestas}
-\cvskill{Programación}{R, SQL, Python, JavaScript}
+\cvskill{Análisis de datos}{Modelos jerárquicos, análisis de sobrevivencia, modelamiento con ecuaciones estructurales, análisis y diseño de encuestas con muestreo complejo}
+\cvskill{Programación}{R, SQL, Python}
 \cvskill{Lenguajes}{Español, Inglés}
 \end{cvskills}
 
