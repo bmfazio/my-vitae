@@ -21,6 +21,7 @@ library(tidyverse)
 limape <- NA
 pucp <- "Pontificia Universidad Católica del Perú"
 upch <- "Universidad Peruana Cayetano Heredia"
+pcm <- "Oficina de Cumplimiento de Gobierno -- Presidencia del Consejo de Ministros"
 unicef <- "UNICEF"
 ciisss <- "Centro de Investigación Interdisciplinaria en Sexualidad, Sida y Sociedad"
 minsa <- "Ministerio de Salud"
@@ -42,39 +43,48 @@ b_biol.date <- "Mar. 2009 - Dic. 2014"
 ```{r}
 tribble(
   ~ position, ~ company, ~ loc, ~ dates, ~ details,
-  "Analista de medición (Consultoría)", unicef, limape, "Ago. 2018 - Jul. 2019",
-  "Integración de datos de encuestas nacionales y bases de datos administrativas",
-  "Analista de medición (Consultoría)", unicef, limape, "Ago. 2018 - Jul. 2019",
-  "Implementación de procedimientos para limpieza de datos y generación de reportes reproducibles",
-  "Analista de medición (Consultoría)", unicef, limape, "Ago. 2018 - Jul. 2019",
-  "Revisión de literatura de medición del bienestar en población adolescente",
+  "Analista de información", pcm, limape, "Sep. 2019 - Presente",
+  "Diseño de ",
+  "Analista de información", pcm, limape, "Sep. 2019 - Presente",
+  "Revisión de literatura en medición del bienestar para población adolescente",
+  
+  "Consultor en medición de indicadores sociales", unicef, limape, "Ago. 2018 - Jul. 2019",
+  "Revisión de literatura sobre medición del bienestar en población adolescente",
+  "Consultor en medición de indicadores sociales", unicef, limape, "Ago. 2018 - Jul. 2019",
+  "Apoyo en la adaptación de la metodología del Índice de Desarrollo Humano para la medición del bienestar adolescente",
+  "Consultor en medición de indicadores sociales", unicef, limape, "Ago. 2018 - Jul. 2019",
+  "Implementación de procedimientos para calcular índices de bienestar adolescente a partir de encuestas nacionales y datos administrativos",
   
   "Analista estadístico", minsa, limape, "Oct. 2016 - May. 2018",
-  "Medición de adherencia al tratamiento en poblaciones selectas a través de bases administrativas",
+  "Diseño de indicadores para el monitoreo de intervenciones contra la anemia materno-infantil",
   "Analista estadístico", minsa, limape, "Oct. 2016 - May. 2018",
-  "Rediseño de procesos para mejorar eficiencia del ingreso de datos",
+  "Implementación de procedimientos para medición y reporte de indicadores empleando Python, R y SQL",
   "Analista estadístico", minsa, limape, "Oct. 2016 - May. 2018",
-  "Diseño de encuestas y desarrollo de metodologías de muestreo para mediciones a nivel nacional",
+  "Apoyo en la estandarización de manuales y formatos para facilitar el registro de información",
   
-  "Analista de datos (Consultoría)", midis, limape, "Dic. 2017 - Feb. 2018",
-  "Implementación de reportes automáticos para monitoreo de indicadores de un programa social",
+  "Consultor en análisis de información", midis, limape, "Dic. 2017 - Feb. 2018",
+  "Apoyo a equipo técnico del Programa Nacional Cuna Más en el diseño de indicadores clave de desempeño",
+  "Consultor en análisis de información", midis, limape, "Dic. 2017 - Feb. 2018",
+  "Implementación de rutinas en SQL para validación de datos y reportes de indicadores",
   
   "Asistente de prácticas", paste(faspa, "--", upch), limape, "Mar. 2017 - Dic. 2017",
   "Tutorías para cursos de maestría en bioestadística y epidemiología",
   "Asistente de prácticas", paste(faspa, "--", upch), limape, "Mar. 2017 - Dic. 2017",
-  "Apoyo a estudiantes de maestría para definir preguntas de investigación y plan de análisis",
+  "Apoyo en el planteamiento de preguntas de investigación y planes de análisis para tesis de maestría",
   
   "Asistente de proyectos", paste(faspa, "--", upch), limape, "Dic. 2014 - Dic. 2016",
-  "Supervisión de la calidad de datos de estudios en curso",
+  "Gestión de trabajo de campo con investigadores, personal asistencial y pacientes",
   "Asistente de proyectos", paste(faspa, "--", upch), limape, "Dic. 2014 - Dic. 2016",
-  "Asistencia logística a investigadores",
+  "Limpieza de datos y análisis descriptivo",
+  "Asistente de proyectos", paste(faspa, "--", upch), limape, "Dic. 2014 - Dic. 2016",
+  "Levantamiento de información de historias clínicas",
   
-  "Asistente de proyectos", ciisss, limape, "Sep. 2015 - Oct. 2016",
-  "Generación automática de reportes de retención para estudio de cohorte",
-  "Asistente de proyectos", ciisss, limape, "Sep. 2015 - Oct. 2016",
-  "Asesoría estadística para el desarrollo de análisis secundario de datos",
-  "Asistente de proyectos", ciisss, limape, "Sep. 2015 - Oct. 2016",
-  "Limpieza de datos y mejora de la documentación de procesos"
+  "Asistente de investigación", ciisss, limape, "Sep. 2015 - Oct. 2016",
+  "Apoyo en el diseño y redacción de planes de análisis estadístico",
+  "Asistente de investigación", ciisss, limape, "Sep. 2015 - Oct. 2016",
+  "Monitoreo de retención y calidad de datos en estudios de cohorte",
+  "Asistente de investigación", ciisss, limape, "Sep. 2015 - Oct. 2016",
+  "Sistematización y optimización de flujos para el procesamiento de datos"
 ) %>% 
   detailed_entries(company, dates, position, loc, details)
 ```
