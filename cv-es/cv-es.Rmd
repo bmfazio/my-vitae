@@ -22,13 +22,13 @@ limape <- NA
 pucp <- "Pontificia Universidad Católica del Perú"
 upch <- "Universidad Peruana Cayetano Heredia"
 pcm <- "Oficina de Cumplimiento de Gobierno -- Presidencia del Consejo de Ministros"
-unicef <- "UNICEF"
+unicef <- "UNICEF Perú"
 ciisss <- "Centro de Investigación Interdisciplinaria en Sexualidad, Sida y Sociedad"
 minsa <- "Ministerio de Salud"
 midis <- "Ministerio de Desarrollo e Inclusión Social"
 faspa <- "Facultad de Salud Pública y Administración"
 
-m_stat <- "Magister en Estadística"
+m_stat <- "Maestría en Estadística"
 m_stat.date <- "Mar. 2017 - Jul. 2019"
 m_epid <- "Maestría en Ciencias en Investigación Epidemiológica"
 m_epid.date <- "Mar. 2015 - Dic. 2015"
@@ -44,9 +44,9 @@ b_biol.date <- "Mar. 2009 - Dic. 2014"
 tribble(
   ~ position, ~ company, ~ loc, ~ dates, ~ details,
   "Analista de información", pcm, limape, "Sep. 2019 - Presente",
-  "Diseño de ",
+  "Coordinación con equipos técnicos y alta dirección para identificar y resolver cuellos de botella en intervenciones sanitarias priorizadas",
   "Analista de información", pcm, limape, "Sep. 2019 - Presente",
-  "Revisión de literatura en medición del bienestar para población adolescente",
+  "Análisis de bases de datos administrativas y encuestas nacionales para el monitoreo de la ejecución e impacto de intervenciones priorizadas",
   
   "Consultor en medición de indicadores sociales", unicef, limape, "Ago. 2018 - Jul. 2019",
   "Revisión de literatura sobre medición del bienestar en población adolescente",
@@ -68,7 +68,7 @@ tribble(
   "Implementación de rutinas en SQL para validación de datos y reportes de indicadores",
   
   "Asistente de prácticas", paste(faspa, "--", upch), limape, "Mar. 2017 - Dic. 2017",
-  "Tutorías para cursos de maestría en bioestadística y epidemiología",
+  "Tutoría para cursos de maestría en bioestadística y epidemiología",
   "Asistente de prácticas", paste(faspa, "--", upch), limape, "Mar. 2017 - Dic. 2017",
   "Apoyo en el planteamiento de preguntas de investigación y planes de análisis para tesis de maestría",
   
@@ -107,9 +107,10 @@ tribble(
 # Habilidades
 
 \begin{cvskills}
-\cvskill{Análisis de datos}{Modelos jerárquicos, análisis de sobrevivencia, modelamiento con ecuaciones estructurales, análisis y diseño de encuestas con muestreo complejo}
+\cvskill{Epidemiología}{Análisis de ensayos clínicos, cálculo de poder, métodos de inferencia causal, validación de instrumentos}
+\cvskill{Métodos estadísticos}{Modelos de regresión para datos con correlación espacial y/o longitudinal, análisis de sobrevivencia, modelamiento con ecuaciones estructurales, técnicas de muestreo avanzadas}
 \cvskill{Programación}{R, SQL, Python}
-\cvskill{Lenguajes}{Español, Inglés}
+\cvskill{Idiomas}{Español, Inglés}
 \end{cvskills}
 
 \pagebreak
