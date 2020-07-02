@@ -15,12 +15,13 @@ output: (function (...) {;template <- here::here("cv-template.tex");vitae::cv_do
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
-library(tidyverse)
+library(tibble)
 
 #limape <- "Lima, Perú"
 limape <- NA
 pucp <- "Pontificia Universidad Católica del Perú"
 upch <- "Universidad Peruana Cayetano Heredia"
+pcm <- "Government Delivery Unit -- Presidencia del Consejo de Ministros"
 unicef <- "UNICEF"
 ciisss <- "Centro de Investigación Interdisciplinaria en Sexualidad, Sida y Sociedad"
 minsa <- "Ministerio de Salud"
@@ -28,7 +29,7 @@ midis <- "Ministerio de Desarrollo e Inclusión Social"
 faspa <- "Facultad de Salud Pública y Administración"
 
 m_stat <- "Magister in Statistics"
-m_stat.date <- "Mar. 2017 - "
+m_stat.date <- "Mar. 2017 - Jul. 2019"
 m_epid <- "Graduate studies in Epidemiological Research"
 m_epid.date <- "Mar. 2015 - Dec. 2015"
 b_biol <- "BSc in Biology"
@@ -42,6 +43,11 @@ b_biol.date <- "Mar. 2009 - Dec. 2014"
 ```{r}
 tribble(
   ~ position, ~ company, ~ loc, ~ dates, ~ details,
+  "Information analyst", pcm, limape, "Sep. 2019 - May. 2020",
+  "Coordinated with technical teams and decisionmakers in order to identify and resolve bottlenecks for prioritized public health interventions",
+  "Information analyst", pcm, limape, "Sep. 2019 - May. 2020",
+  "Analysis of administrative data and national surveys to support monitoring and evaluation of prioritized interventions",
+
   "Measurement Analyst (Contractor)", unicef, limape, "Aug. 2018 -",
   "Integrated data from national surveys and administrative databases to enable calculation of well-being indicators",
   "Measurement Analyst (Contractor)", unicef, limape, "Aug. 2018 -",

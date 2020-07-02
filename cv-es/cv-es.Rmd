@@ -15,7 +15,7 @@ output: (function (...) {;template <- here::here("cv-template.tex");vitae::cv_do
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
-library(tidyverse)
+library(tibble)
 
 #limape <- "Lima, Perú"
 limape <- NA
@@ -43,9 +43,9 @@ b_biol.date <- "Mar. 2009 - Dic. 2014"
 ```{r}
 tribble(
   ~ position, ~ company, ~ loc, ~ dates, ~ details,
-  "Analista de información", pcm, limape, "Sep. 2019 - Presente",
+  "Analista de información", pcm, limape, "Sep. 2019 - May. 2020",
   "Coordinación con equipos técnicos y alta dirección para identificar y resolver cuellos de botella en intervenciones sanitarias priorizadas",
-  "Analista de información", pcm, limape, "Sep. 2019 - Presente",
+  "Analista de información", pcm, limape, "Sep. 2019 - May. 2020",
   "Análisis de bases de datos administrativas y encuestas nacionales para el monitoreo de la ejecución e impacto de intervenciones priorizadas",
   
   "Consultor en medición de indicadores sociales", unicef, limape, "Ago. 2018 - Jul. 2019",
