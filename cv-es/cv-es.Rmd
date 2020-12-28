@@ -5,11 +5,11 @@ address: "Métodos cuantitativos aplicados a salud pública e investigación bio
 phone: +51 987 807 758
 www: bmfazio.github.io
 email: "boris.fazio@outlook.com"
-#twitter: bmfazio
+#wtwitter: bmfazio
 github: bmfazio
 linkedin: bmfazio
 date: "`r Sys.setlocale('LC_TIME', 'Spanish');format(Sys.time(), '%B %Y')`"
-output: vitae::awesomecv
+output: (function (..., latex_engine = "xelatex") {; template <- here::here("cv-template.tex"); vitae:::set_entry_formats(vitae:::awesome_cv_entries); vitae:::copy_supporting_files("awesomecv"); vitae::cv_document(..., template = template, latex_engine = latex_engine)})
 ---
 
 ```{r setup, include=FALSE}
@@ -35,8 +35,6 @@ m_epid <- "Maestría en Ciencias en Investigación Epidemiológica"
 m_epid.date <- "Mar. 2015 - Dic. 2015"
 b_biol <- "Bachiller en Ciencias con mención en Biología"
 b_biol.date <- "Mar. 2009 - Dic. 2014"
-
-
 ```
 
 # Experiencia
@@ -44,12 +42,11 @@ b_biol.date <- "Mar. 2009 - Dic. 2014"
 ```{r}
 tribble(
   ~ position, ~ company, ~ loc, ~ dates, ~ details,
-  "Consultor en gestión de información", giz, limape, "Jul. 2020 - Presente",
-  "Fortalecimiento de los procesos de visualización de reportes de indicadores del Premio Nacional Sello Municipal del MIDIS",
-  "Consultor en gestión de información", giz, limape, "Jul. 2020 - Presente",
-  "Apoyo en procesos de gestión de la información del Sello Municipal",
+  "Consultor en gestión de información", giz, limape, "Jul. 2020 - Dic. 2020",
+  "Desarrollo de tableros de control Tableau para el Premio Nacional Sello Municipal",
+  "Consultor en gestión de información", giz, limape, "Jul. 2020 - Dic. 2020",
+  "Diseño de indicadores para seguimiento de intervenciones en agua y saneamiento",
 
-    
   "Analista de información", pcm, limape, "Sep. 2019 - May. 2020",
   "Coordinación con equipos técnicos y alta dirección para identificar y resolver cuellos de botella en intervenciones sanitarias priorizadas",
   "Analista de información", pcm, limape, "Sep. 2019 - May. 2020",
