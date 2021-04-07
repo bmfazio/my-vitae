@@ -28,13 +28,14 @@ minsa <- "Ministerio de Salud"
 midis <- "Ministerio de Desarrollo e Inclusión Social"
 faspa <- "Facultad de Salud Pública y Administración"
 giz   <- "Cooperación Alemana al Desarrollo -- Agencia de la GIZ en el Perú"
+fbvl  <- "Fundación Bernard van Leer"
 
-m_stat <- "Maestría en Estadística"
-m_stat.date <- "Mar. 2017 - Jul. 2019"
-m_epid <- "Maestría en Ciencias en Investigación Epidemiológica"
+m_stat <- "Magíster en Estadística"
+m_stat.date <- "Marzo 2021"
+m_epid <- "Maestría en Ciencias en Investigación Epidemiológica (egresado)"
 m_epid.date <- "Mar. 2015 - Dic. 2015"
 b_biol <- "Bachiller en Ciencias con mención en Biología"
-b_biol.date <- "Mar. 2009 - Dic. 2014"
+b_biol.date <- "Julio 2015"
 ```
 
 # Experiencia
@@ -42,6 +43,11 @@ b_biol.date <- "Mar. 2009 - Dic. 2014"
 ```{r}
 tribble(
   ~ position, ~ company, ~ loc, ~ dates, ~ details,
+  "Especialista en Gestión Territorial", fbvl, limape, "Ene. 2021 - ",
+  'Nexo entre equipo de diseño de políticas y equipo de desarrollo en la implementación de aplicativo para el seguimiento de la Estrategia de Gestión Territorial "Primero la Infancia" (EGTPI)',
+  "Especialista en Gestión Territorial", fbvl, limape, "Ene. 2021 - ",
+  "Diseño de indicadores para seguimiento de intervenciones a favor de la primera infancia en el marco de la EGTPI",
+  
   "Consultor en gestión de información", giz, limape, "Jul. 2020 - Dic. 2020",
   "Desarrollo de tableros de control Tableau para el Premio Nacional Sello Municipal",
   "Consultor en gestión de información", giz, limape, "Jul. 2020 - Dic. 2020",
@@ -71,10 +77,10 @@ tribble(
   "Consultor en análisis de información", midis, limape, "Dic. 2017 - Feb. 2018",
   "Implementación de rutinas en SQL para validación de datos y reportes de indicadores",
   
-  "Asistente de prácticas", paste(faspa, "--", upch), limape, "Mar. 2017 - Dic. 2017",
-  "Tutoría para cursos de maestría en bioestadística y epidemiología",
-  "Asistente de prácticas", paste(faspa, "--", upch), limape, "Mar. 2017 - Dic. 2017",
-  "Apoyo en el planteamiento de preguntas de investigación y planes de análisis para tesis de maestría",
+  # "Asistente de prácticas", paste(faspa, "--", upch), limape, "Mar. 2017 - Dic. 2017",
+  # "Tutoría para cursos de maestría en bioestadística y epidemiología",
+  # "Asistente de prácticas", paste(faspa, "--", upch), limape, "Mar. 2017 - Dic. 2017",
+  # "Apoyo en el planteamiento de preguntas de investigación y planes de análisis para tesis de maestría",
   
   "Asistente de proyectos", paste(faspa, "--", upch), limape, "Dic. 2014 - Dic. 2016",
   "Gestión de trabajo de campo con investigadores, personal asistencial y pacientes",
@@ -99,27 +105,26 @@ tribble(
 tribble(
   ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
   m_stat, pucp, limape, m_stat.date,
-  "Egresado (1.° puesto)",
+  "Primer puesto, tesis con mención sobresaliente",
   m_epid, upch, limape, m_epid.date,
-  "Egresado",
+  NA,
   b_biol, upch, limape, b_biol.date,
   NA
 ) %>% 
   detailed_entries(uni, dates, degree, loc, details)
 ```
 
-\pagebreak
-
-# Habilidades
+# Conocimientos
 
 \begin{cvskills}
-\cvskill{Epidemiología}{Análisis de ensayos clínicos, cálculo de poder, métodos de inferencia causal, validación de instrumentos}
-\cvskill{Métodos estadísticos}{Modelos de regresión para datos con correlación espacial y/o longitudinal, análisis de sobrevivencia, modelamiento con ecuaciones estructurales, técnicas de muestreo avanzadas}
+\cvskill{Métodos estadísticos}{Cálculo de poder y tamaño de muestra, diseños muestrales para encuestas, modelos de regresión para datos con\newline correlación espacial y temporal, análisis de sobrevivencia, modelos con ecuaciones estructurales}
 \cvskill{Programación}{R, SQL, Python}
 \cvskill{Idiomas}{Español, Inglés}
+\cvskill{Otros}{Tableau, diseño de experiencia de usuario, diseño de indicadores}
 \end{cvskills}
 
-# Publicaciones
+
+# Publicaciones académicas
 
 ```{r}
 tribble(
