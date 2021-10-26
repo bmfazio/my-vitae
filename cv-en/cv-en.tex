@@ -1,0 +1,193 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\colorlet{awesome}{awesome-red}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\name{Boris Fazio}{}
+
+\position{Data Analyst}
+\address{Quantitative methods for public health and biomedical research}
+
+\mobile{+51 987 807 758}
+\email{\href{mailto:boris.fazio@outlook.com}{\nolinkurl{boris.fazio@outlook.com}}}
+\homepage{bmfazio.github.io}
+\github{bmfazio}
+\linkedin{bmfazio}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {October 2021}
+    {Boris Fazio~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\hypertarget{experience}{%
+\section{Experience}\label{experience}}
+
+\begin{cventries}
+    \cventry{Government Delivery Unit -- Presidencia del Consejo de Ministros}{Information analyst}{}{Sep. 2019 - May. 2020}{\begin{cvitems}
+\item Coordinated with technical teams and decisionmakers in order to identify and resolve bottlenecks for prioritized public health interventions
+\item Analysis of administrative data and national surveys to support monitoring and evaluation of prioritized interventions
+\end{cvitems}}
+    \cventry{UNICEF}{Measurement Analyst (Contractor)}{}{Aug. 2018 -}{\begin{cvitems}
+\item Integrated data from national surveys and administrative databases to enable calculation of well-being indicators
+\item Implemented a reproducible pipeline for data processing and reporting
+\item Conducted a review of published literature on the measurement of adolescent well-being
+\end{cvitems}}
+    \cventry{Ministerio de Salud}{Data Analyst}{}{Oct. 2016 - May. 2018}{\begin{cvitems}
+\item Leveraged data from multiple administrative databases to identify over 100 000 children with incomplete anemia treatment
+\item Led redesign of KPI monitoring application, offloading data entry tasks from our five person team to over 200 counterparts countrywide
+\item Provided statistical support on sampling schemes and sample size selection for national surveys
+\item Advised on operational definitions of KPIs for health interventions
+\end{cvitems}}
+    \cventry{Ministerio de Desarrollo e Inclusión Social}{Data Analyst (Contractor)}{}{Dec. 2017 - Feb. 2018}{\begin{cvitems}
+\item Implemented automated reports for monitoring of health interventions
+\end{cvitems}}
+    \cventry{Facultad de Salud Pública y Administración -- Universidad Peruana Cayetano Heredia}{Teaching Assistant}{}{Mar. 2017 - Dec. 2017}{\begin{cvitems}
+\item Tutoring for graduate-level Biostatistics and Epidemiology courses
+\item Helped graduate students define a research question and design an analysis plan
+\end{cvitems}}
+    \cventry{Facultad de Salud Pública y Administración -- Universidad Peruana Cayetano Heredia}{Research Assistant}{}{Dec. 2014 - Dec. 2016}{\begin{cvitems}
+\item Generated periodic reports and recommendations to minimize entry errors for ongoing studies
+\item Provided logistics support for other researchers
+\end{cvitems}}
+    \cventry{Centro de Investigación Interdisciplinaria en Sexualidad, Sida y Sociedad}{Data Manager}{}{Sep. 2015 - Oct. 2016}{\begin{cvitems}
+\item Automated retention analysis reports for cohort study
+\item Advised colleagues on statistical methods for study analysis
+\item Cleaned data and improved documentation for existing procedures
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+\begin{cventries}
+    \cventry{Pontificia Universidad Católica del Perú}{Master in Statistics}{}{April 2021}{}\vspace{-4.0mm}
+    \cventry{Universidad Peruana Cayetano Heredia}{Bachelor of Science in Biology}{}{July 2015}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{skills}{%
+\section{Skills}\label{skills}}
+
+\begin{cvskills}
+\cvskill{Data analysis}{Hierarchical models, survival analysis, structural equation modeling, survey analysis and design}
+\cvskill{Programming}{R, SQL, Python, JavaScript}
+\cvskill{Languages}{Spanish, English}
+\end{cvskills}
+
+\pagebreak
+
+\hypertarget{publications}{%
+\section{Publications}\label{publications}}
+
+\begin{cvhonors}
+    \cvhonor{}{\textbf{Allan-Blitz LT et al.} \textit{The Development of an Online Risk Calculator for the Prediction of Future Syphilis among a High-Risk Cohort of Men Who Have Sex with Men and Transgender Women in Lima, Peru.} Sexual Health, 2018.}{}{}
+    \cvhonor{}{\textbf{García PJ et al.} \textit{Sexual health knowledge and practices and STI/HIV prevalence among long-distance truck drivers in Peru.} SAGE Open Medicine, 2017.}{}{}
+    \cvhonor{}{\textbf{Egoavil MS et al.} \textit{Qualitative Study for the Development of a Telemedicine System in Palliative Care.} Palliative Medicine and Hospice Care, 2017.}{}{}
+\end{cvhonors}
+
+\end{document}

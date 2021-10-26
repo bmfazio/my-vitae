@@ -3,7 +3,7 @@ name: Boris Fazio
 position: "Analista de Datos"
 address: "Métodos cuantitativos aplicados a salud pública e investigación biomédica"
 phone: +51 987 807 758
-www: bmfazio.github.io
+#www: bmfazio.github.io
 email: "boris.fazio@outlook.com"
 #wtwitter: bmfazio
 github: bmfazio
@@ -30,9 +30,9 @@ faspa <- "Facultad de Salud Pública y Administración"
 giz   <- "Cooperación Alemana al Desarrollo -- Agencia de la GIZ en el Perú"
 fbvl  <- "Fundación Bernard van Leer"
 
-m_stat <- "Magíster en Estadística (título en trámite)"
+m_stat <- "Magíster en Estadística"
 m_stat.date <- "Marzo 2021"
-m_epid <- "Maestría en Ciencias en Investigación Epidemiológica (egresado)"
+m_epid <- "Egresado de Maestría en Investigación Epidemiológica"
 m_epid.date <- "Mar. 2015 - Dic. 2015"
 b_biol <- "Bachiller en Ciencias con mención en Biología"
 b_biol.date <- "Julio 2015"
@@ -43,10 +43,12 @@ b_biol.date <- "Julio 2015"
 ```{r}
 tribble(
   ~ position, ~ company, ~ loc, ~ dates, ~ details,
-  "Especialista en Gestión Territorial", fbvl, limape, "Ene. 2021 - Abr. 2021",
-  'Nexo entre equipo de diseño de políticas y equipo de desarrollo en la implementación de aplicativo para el seguimiento de la Estrategia de Gestión Territorial "Primero la Infancia" (EGTPI)',
-  "Especialista en Gestión Territorial", fbvl, limape, "Ene. 2021 - Abr. 2021",
-  "Diseño de indicadores para seguimiento de intervenciones a favor de la primera infancia en el marco de la EGTPI",
+  "Especialista en Seguimiento y Gestión Territorial", fbvl, limape, "Ene. 2021 - Presente",
+  'Nexo entre equipo de diseño de políticas y equipo de desarrollo para el recojo e implementación de necesidades del aplicativo de la Estrategia de Gestión Territorial "Primero la Infancia" (EGTPI)',
+  "Especialista en Seguimiento y Gestión Territorial", fbvl, limape, "Ene. 2021 - Presente",
+  "Desarrollo de reportes estandarizados para el seguimiento de la implementación e impacto de la EGTPI",
+  "Especialista en Seguimiento y Gestión Territorial", fbvl, limape, "Ene. 2021 - Presente",
+  "Evaluación de la usabilidad y experiencia de usuario en el aplicativo EGTPI",
   
   "Consultor en gestión de información", giz, limape, "Jul. 2020 - Dic. 2020",
   "Desarrollo de tableros de control Tableau para el Premio Nacional Sello Municipal",

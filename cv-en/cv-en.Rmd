@@ -9,7 +9,7 @@ email: "boris.fazio@outlook.com"
 github: bmfazio
 linkedin: bmfazio
 date: "`r Sys.setlocale('LC_ALL','English');format(Sys.time(), '%B %Y')`"
-output: (function (...) {;template <- here::here("cv-template.tex");vitae::cv_document(..., template = template, citation_package = "biblatex",latex_engine = "xelatex")})
+output: (function (..., latex_engine = "xelatex") {; template <- here::here("cv-template.tex"); vitae:::set_entry_formats(vitae:::awesome_cv_entries); vitae:::copy_supporting_files("awesomecv"); vitae::cv_document(..., template = template, latex_engine = latex_engine)})
 ---
 
 ```{r setup, include=FALSE}
@@ -28,12 +28,10 @@ minsa <- "Ministerio de Salud"
 midis <- "Ministerio de Desarrollo e Inclusión Social"
 faspa <- "Facultad de Salud Pública y Administración"
 
-m_stat <- "Magister in Statistics"
-m_stat.date <- "Mar. 2017 - Jul. 2019"
-m_epid <- "Graduate studies in Epidemiological Research"
-m_epid.date <- "Mar. 2015 - Dec. 2015"
-b_biol <- "BSc in Biology"
-b_biol.date <- "Mar. 2009 - Dec. 2014"
+m_stat <- "Master in Statistics"
+m_stat.date <- "April 2021"
+b_biol <- "Bachelor of Science in Biology"
+b_biol.date <- "July 2015"
 
 
 ```
@@ -93,9 +91,7 @@ tribble(
 tribble(
   ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
   m_stat, pucp, limape, m_stat.date,
-  "Thesis pending review, coursework complete (Rank: 1/38)",
-  m_epid, upch, limape, m_epid.date,
-  "Masters coursework complete",
+  NA,
   b_biol, upch, limape, b_biol.date,
   NA
 ) %>% 
