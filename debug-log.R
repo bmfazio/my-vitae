@@ -27,7 +27,7 @@ evaluate(code,
          keep_warning = T, keep_message = T, 
          stop_on_error =
            if (options$error && options$include) 0L else 2L,
-         output_handler = knit_handlers(options$render, options)))
+         output_handler = knit_handlers(options$render, options))
 
 evaluate(code,
          envir = env,

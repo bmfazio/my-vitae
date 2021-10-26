@@ -207,10 +207,10 @@
     },
     "tibble": {
       "Package": "tibble",
-      "Version": "3.0.4",
+      "Version": "2.1.3",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "71dffd8544691c520dd8e41ed2d7e070"
+      "Hash": "8248ee35d1e15d1e506f05f5a5d46a75"
     },
     "tidyselect": {
       "Package": "tidyselect",
