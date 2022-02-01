@@ -43,11 +43,11 @@ b_biol.date <- "Julio 2015"
 ```{r}
 tribble(
   ~ position, ~ company, ~ loc, ~ dates, ~ details,
-  "Especialista en implementación de políticas", fbvl, limape, "Ene. 2021 - Presente",
+  "Especialista en gestión territorial", fbvl, limape, "Ene. 2021 - Nov 2021",
   'Nexo entre equipo de diseño de políticas y equipo de desarrollo para el recojo e implementación de necesidades del aplicativo de la Estrategia de Gestión Territorial "Primero la Infancia" (EGTPI)',
-  "Especialista en implementación de políticas", fbvl, limape, "Ene. 2021 - Presente",
+  "Especialista en gestión territorial", fbvl, limape, "Ene. 2021 - Presente",
   "Elaboración de tableros de control con Tableau y aplicativos Shiny para la generación de reportes automáticos",
-  "Especialista en implementación de políticas", fbvl, limape, "Ene. 2021 - Presente",
+  "Especialista en gestión territorial", fbvl, limape, "Ene. 2021 - Presente",
   "Evaluación de la usabilidad y experiencia de usuario en el aplicativo EGTPI",
   
   "Consultor en gestión de información", giz, limape, "Jul. 2020 - Dic. 2020",
@@ -115,6 +115,8 @@ tribble(
 ) %>% 
   detailed_entries(uni, dates, degree, loc, details)
 ```
+
+ 
 
 # Conocimientos
 
