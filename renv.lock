@@ -256,10 +256,10 @@
     },
     "vitae": {
       "Package": "vitae",
-      "Version": "0.3.0",
+      "Version": "0.4.2",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "0845e4d6003bebb82e688324f78eb7e6"
+      "Hash": "e60588887f2240a2d657744947ba1778"
     },
     "xfun": {
       "Package": "xfun",

@@ -3,10 +3,10 @@ name: Boris Fazio
 position: "Data Analyst"
 address: "Quantitative methods for public health and biomedical research"
 phone: +51 987 807 758
-www: bmfazio.github.io
+#www: bmfazio.github.io
 email: "boris.fazio@outlook.com"
 #twitter: bmfazio
-github: bmfazio
+#github: bmfazio
 linkedin: bmfazio
 date: "`r Sys.setlocale('LC_ALL','English');format(Sys.time(), '%B %Y')`"
 output: (function (..., latex_engine = "xelatex") {; template <- here::here("cv-template.tex"); vitae:::set_entry_formats(vitae:::awesome_cv_entries); vitae:::copy_supporting_files("awesomecv"); vitae::cv_document(..., template = template, latex_engine = latex_engine)})
@@ -21,19 +21,21 @@ library(tibble)
 limape <- NA
 pucp <- "Pontificia Universidad Católica del Perú"
 upch <- "Universidad Peruana Cayetano Heredia"
-pcm <- "Government Delivery Unit -- Presidencia del Consejo de Ministros"
+pcm <- "Delivery Unit -- Presidencia del Consejo de Ministros"
 unicef <- "UNICEF"
 ciisss <- "Centro de Investigación Interdisciplinaria en Sexualidad, Sida y Sociedad"
 minsa <- "Ministerio de Salud"
 midis <- "Ministerio de Desarrollo e Inclusión Social"
 faspa <- "Facultad de Salud Pública y Administración"
+giz   <- "Deutsche Gesellschaft für Internationale Zusammenarbeit -- Peru"
+fbvl  <- "Bernard van Leer Foundation"
 
 m_stat <- "Master in Statistics"
 m_stat.date <- "April 2021"
+# m_epid <- "Egresado de Maestría en Investigación Epidemiológica"
+# m_epid.date <- "Mar. 2015 - Dic. 2015"
 b_biol <- "Bachelor of Science in Biology"
 b_biol.date <- "July 2015"
-
-
 ```
 
 # Experience
@@ -41,45 +43,55 @@ b_biol.date <- "July 2015"
 ```{r}
 tribble(
   ~ position, ~ company, ~ loc, ~ dates, ~ details,
-  "Information analyst", pcm, limape, "Sep. 2019 - May. 2020",
-  "Coordinated with technical teams and decisionmakers in order to identify and resolve bottlenecks for prioritized public health interventions",
-  "Information analyst", pcm, limape, "Sep. 2019 - May. 2020",
-  "Analysis of administrative data and national surveys to support monitoring and evaluation of prioritized interventions",
+  "Project specialist", fbvl, limape, "Jan. 2021 - Current",
+  "Coordinated with software development and policy design teams to determine specifications for an in-house app created to improve local governments' management of public health interventions",
+  "Project specialist", fbvl, limape, "Jan. 2021 - Current",
+  "Carried out usability tests to improve user experience with both the app and program protocols",
+  "Project specialist", fbvl, limape, "Jan. 2021 - Current",
+  "Developed Shiny apps and Tableau dashboards to improve data reporting practices and task priorization",
+  
+  "Data management consultant", giz, limape, "Jul. 2020 - Dic. 2020",
+  "Developed a set of Tableau dashboards to track KPIs for local governments",
+  "Data management consultant", giz, limape, "Jul. 2020 - Dic. 2020",
+  "Assessed available data for the development of KPIs to track water and sanitation interventions led by local governments",
+  
+  "Information analyst", pcm, limape, "Sep. 2019 - May 2020",
+  "Identified the suboptimal allocation of medical supplies across health care facilities, leading to a redistribution which took the number of adequately provisioned facilities from 36% to upwards of 80%",
+  "Information analyst", pcm, limape, "Sep. 2019 - May 2020",
+  "Processed administrative data and survey microdata to provide weekly reports on health sector KPIs",
 
-  "Measurement Analyst (Contractor)", unicef, limape, "Aug. 2018 -",
-  "Integrated data from national surveys and administrative databases to enable calculation of well-being indicators",
-  "Measurement Analyst (Contractor)", unicef, limape, "Aug. 2018 -",
-  "Implemented a reproducible pipeline for data processing and reporting",
-  "Measurement Analyst (Contractor)", unicef, limape, "Aug. 2018 -",
-  "Conducted a review of published literature on the measurement of adolescent well-being",
+  "Measurement analyst", unicef, limape, "Aug. 2018 - Jul. 2019",
+  "Conducted a literature review on the measurement of adolescent well-being",
+  "Measurement analyst", unicef, limape, "Aug. 2018 - Jul. 2019",
+  "Produced an adolescent well-being index based on administrative data and survey microdata",
   
-  "Data Analyst", minsa, limape, "Oct. 2016 - May. 2018",
-  "Leveraged data from multiple administrative databases to identify over 100 000 children with incomplete anemia treatment",
-  "Data Analyst", minsa, limape, "Oct. 2016 - May. 2018",
-  "Led redesign of KPI monitoring application, offloading data entry tasks from our five person team to over 200 counterparts countrywide",
-  "Data Analyst", minsa, limape, "Oct. 2016 - May. 2018",
-  "Provided statistical support on sampling schemes and sample size selection for national surveys",
-  "Data Analyst", minsa, limape, "Oct. 2016 - May. 2018",
-  "Advised on operational definitions of KPIs for health interventions",
+  "Data analyst", minsa, limape, "Oct. 2016 - May 2018",
+  "Processed multiple administrative databases to identify over 100 000 children with an incomplete course of treatment for anemia",
+  "Data analyst", minsa, limape, "Oct. 2016 - May 2018",
+  "Advised on the redesign of a data collection application to facilitate distributed data entry capabilities",
+  "Data analyst", minsa, limape, "Oct. 2016 - May 2018",
+  "Advised on sampling methodology for a national survey of IT infrastructure in the public healthcare sector",
+  "Data analyst", minsa, limape, "Oct. 2016 - May 2018",
+  "Advised on the design of KPIs for tracking health interventions",
   
-  "Data Analyst (Contractor)", midis, limape, "Dec. 2017 - Feb. 2018",
-  "Implemented automated reports for monitoring of health interventions",
+  "Data analyst", midis, limape, "Dec. 2017 - Feb. 2018",
+  "Implemented automated reports for monitoring the health status of social program beneficiaries",
   
-  "Teaching Assistant", paste(faspa, "--", upch), limape, "Mar. 2017 - Dec. 2017",
+  "Teaching assistant", paste(faspa, "--", upch), limape, "Mar. 2017 - Dec. 2017",
   "Tutoring for graduate-level Biostatistics and Epidemiology courses",
-  "Teaching Assistant", paste(faspa, "--", upch), limape, "Mar. 2017 - Dec. 2017",
+  "Teaching assistant", paste(faspa, "--", upch), limape, "Mar. 2017 - Dec. 2017",
   "Helped graduate students define a research question and design an analysis plan",
   
-  "Research Assistant", paste(faspa, "--", upch), limape, "Dec. 2014 - Dec. 2016",
+  "Research assistant", paste(faspa, "--", upch), limape, "Dec. 2014 - Dec. 2016",
   "Generated periodic reports and recommendations to minimize entry errors for ongoing studies",
-  "Research Assistant", paste(faspa, "--", upch), limape, "Dec. 2014 - Dec. 2016",
+  "Research assistant", paste(faspa, "--", upch), limape, "Dec. 2014 - Dec. 2016",
   "Provided logistics support for other researchers",
   
-  "Data Manager", ciisss, limape, "Sep. 2015 - Oct. 2016",
+  "Data manager", ciisss, limape, "Sep. 2015 - Oct. 2016",
   "Automated retention analysis reports for cohort study",
-  "Data Manager", ciisss, limape, "Sep. 2015 - Oct. 2016",
+  "Data manager", ciisss, limape, "Sep. 2015 - Oct. 2016",
   "Advised colleagues on statistical methods for study analysis",
-  "Data Manager", ciisss, limape, "Sep. 2015 - Oct. 2016",
+  "Data manager", ciisss, limape, "Sep. 2015 - Oct. 2016",
   "Cleaned data and improved documentation for existing procedures"
 ) %>% 
   detailed_entries(company, dates, position, loc, details)
@@ -91,7 +103,7 @@ tribble(
 tribble(
   ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
   m_stat, pucp, limape, m_stat.date,
-  NA,
+  "Thesis: Endpoint-inflated beta-binomial regression for correlated count data",
   b_biol, upch, limape, b_biol.date,
   NA
 ) %>% 
@@ -101,22 +113,31 @@ tribble(
 # Skills
 
 \begin{cvskills}
-\cvskill{Data analysis}{Hierarchical models, survival analysis, structural equation modeling, survey analysis and design}
-\cvskill{Programming}{R, SQL, Python, JavaScript}
+\cvskill{Data analysis}{Hierarchical models, survival analysis, structural equation modeling, sampling techniques}
+\cvskill{Programming}{R, SQL, Python, git}
 \cvskill{Languages}{Spanish, English}
 \end{cvskills}
-
-\pagebreak
 
 # Publications
 
 ```{r}
 tribble(
   ~ details,
-  "\\textbf{Allan-Blitz LT et al.} \\textit{The Development of an Online Risk Calculator for the Prediction of Future Syphilis among a High-Risk Cohort of Men Who Have Sex with Men and Transgender Women in Lima, Peru.} Sexual Health, 2018.",
-  "\\textbf{García PJ et al.} \\textit{Sexual health knowledge and practices and STI/HIV prevalence among long-distance truck drivers in Peru.} SAGE Open Medicine, 2017.",
-  "\\textbf{Egoavil MS et al.} \\textit{Qualitative Study for the Development of a Telemedicine System in Palliative Care.} Palliative Medicine and Hospice Care, 2017."
+  "Allan-Blitz LT, Konda KA, Vargas SK, Wang X, Segura ER, \\textbf{Fazio BM}, Calvo GM, Caceres CF, Klausner JD. \\textit{The Development of an Online Risk Calculator for the Prediction of Future Syphilis among a High-Risk Cohort of Men Who Have Sex with Men and Transgender Women in Lima, Peru.} Sexual Health, 2018.",
+  "García PJ, \\textbf{Fazio B}, Bayer AM, Lizarraga AG, Chiappe M, La Rosa S, Lazo M, López L, Valderrama M, Cárcamo CP. \\textit{Sexual health knowledge and practices and STI/HIV prevalence among long-distance truck drivers in Peru.} SAGE Open Medicine, 2017.",
+  "Egoavil MS, Condor DF, Pinazo-Vidal MA, Quezada JM, \\textbf{Fazio BM}, Bueno JC, Peña LE, Farfán J, De la Puente JG, Arce C, Malpartida B, Arostegui A, Pérez-Lu JE. \\textit{Qualitative Study for the Development of a Telemedicine System in Palliative Care.} Palliative Medicine and Hospice Care, 2017."
 ) %>%
   brief_entries(what = details, .protect = FALSE)
-  #detailed_entries(why = details, .protect = FALSE)
+```
+
+# Presentations and posters
+
+```{r}
+tribble(
+  ~ details,
+  "Bustamante MJ, \\textbf{Fazio B}, Calvo GM, Lugo E, Konda KA. \\textit{Understanding gay couples: a new vision for HIV prevention in Peru.} Poster presented at: 10th IAS Conference on HIV Science; 2019, Mexico DF.",
+  "\\textbf{Fazio B}, Bayes C, Sal y Rosas G. \\textit{Approaches to Model Specification for Regression Analysis with Correlated, Endpoint-Inflated Bounded Count Data.} Poster presented at: 
+VI Latin American Meeting on Bayesian Statistics; 2019, Lima."
+) %>%
+  brief_entries(what = details, .protect = FALSE)
 ```
