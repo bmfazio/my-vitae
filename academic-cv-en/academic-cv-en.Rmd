@@ -1,0 +1,168 @@
+---
+name: Boris Fazio
+position: "Data Analyst"
+address: "Quantitative methods for public health and biomedical research"
+phone: +51 987 807 758
+#www: bmfazio.github.io
+email: "boris.fazio@outlook.com"
+#twitter: bmfazio
+#github: bmfazio
+linkedin: bmfazio
+date: "`r Sys.setlocale('LC_ALL','English');format(Sys.time(), '%B %Y')`"
+output: (function (..., latex_engine = "xelatex") {; template <- here::here("cv-template.tex"); vitae:::set_entry_formats(vitae:::awesome_cv_entries); vitae:::copy_supporting_files("awesomecv"); vitae::cv_document(..., template = template, latex_engine = latex_engine)})
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+
+#limape <- "Lima, Perú"
+limape <- NA
+vienna <- NA
+pucp <- "Pontificia Universidad Católica del Perú"
+upch <- "Universidad Peruana Cayetano Heredia"
+pcm <- "Delivery Unit -- Presidencia del Consejo de Ministros"
+unicef <- "UNICEF"
+ciisss <- "Centro de Investigación Interdisciplinaria en Sexualidad, Sida y Sociedad"
+minsa <- "Ministerio de Salud"
+midis <- "Ministerio de Desarrollo e Inclusión Social"
+faspa <- "Facultad de Salud Pública y Administración"
+giz   <- "Deutsche Gesellschaft für Internationale Zusammenarbeit -- Peru"
+fbvl  <- "Bernard van Leer Foundation"
+vbc <- "Research Institute of Molecular Pathology -- Vienna Biocenter"
+
+m_stat <- "Master in Statistics"
+m_stat.date <- "2021"
+m_epid <- "Complete coursework towards Master in Epidemiology"
+m_epid.date <- "2015"
+b_biol <- "Bachelor of Science in Biology"
+b_biol.date <- "2015"
+```
+
+# Education
+
+```{r}
+tribble(
+  ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
+  m_stat, pucp, limape, m_stat.date,
+  "Thesis: Endpoint-inflated beta-binomial regression for correlated count data.",
+  m_stat, pucp, limape, m_stat.date,
+  "Awarded scholarship for outstanding academic performance.",
+  m_epid, upch, limape, m_epid.date,
+  NA,
+  b_biol, upch, limape, b_biol.date,
+  NA
+) %>% 
+  detailed_entries(uni, dates, degree, loc, details)
+```
+
+# Research experience
+
+```{r}
+tribble(
+    ~ position, ~ company, ~ loc, ~ dates, ~ details,
+  "Freelance statistical consultant", "Independent", limape, "Jul. 2018 - Present",
+  "Have taken various paid and unpaid opportunities to advise researchers on issues of study design, sample size calculation, selection of study-appropriate methods for statistical analysis and responses to reviewer comments regarding statistical methods.",
+  
+  "Research assistant", ciisss, limape, "Sep. 2015 - Oct. 2016",
+  "Refactored and improved the documentation for STATA scripts used to analyze data from an ongoing cohort study. Cleaned and analyzed the data. Created an R script to monitor cohort retention statistics. Assisted colleagues with writing the statistical methods sections of their papers.",
+  
+  "Research assistant", paste(faspa, "--", upch), limape, "Dec. 2014 - Jul. 2016",
+  "Collected quantitative and qualitative data from health records and interviews with patients and health personnel. Managed the configuration of questionnaires and equipment for use with mobile phone-based survey application Magpi. Trained field personnel in the use of the application. Continuously monitored data quality during fieldwork and relayed feedback to personnel. Cleaned and transformed the collected data to produce descriptive summaries and graphics.",
+
+  "Summer intern", vbc, vienna, "Jun. 2013 - Jul. 2013",
+  "Collected, annotated and analyzed longitudinal data on the presence of synapses in the auditory cortex of live mice using two-photon excitation microscopy."
+) %>% 
+  detailed_entries(company, dates, position, loc, details)
+```
+
+# Teaching experience
+
+```{r}
+tribble(
+  ~ position, ~ company, ~ loc, ~ dates, ~ details,
+  "Teaching assistant", pucp, limape, "Mar. 2018 - Jul. 2018",
+  "Undergraduate TA for two introductory statistics courses and an advanced regression techniques course.",
+  
+  "Teaching assistant", paste(faspa, "--", upch), limape, "Mar. 2017 - Dec. 2017",
+  "Graduate TA for the biostatistics and epidemiology courses. Additionally adviced students with the selection of their thesis research question, study design and analysis."
+) %>% 
+  detailed_entries(company, dates, position, loc, details)
+```
+
+# Publications
+
+```{r}
+tribble(
+  ~ details,
+  "Allan-Blitz LT, Konda KA, Vargas SK, Wang X, Segura ER, \\textbf{Fazio BM}, Calvo GM, Caceres CF, Klausner JD. \\textit{The Development of an Online Risk Calculator for the Prediction of Future Syphilis among a High-Risk Cohort of Men Who Have Sex with Men and Transgender Women in Lima, Peru.} Sexual Health, 2018."
+) %>%
+  brief_entries(what = details, .protect = FALSE)
+```
+
+```{r}
+tribble(
+  ~ details,
+  "García PJ, \\textbf{Fazio B}, Bayer AM, Lizarraga AG, Chiappe M, La Rosa S, Lazo M, López L, Valderrama M, Cárcamo CP. \\textit{Sexual health knowledge and practices and STI/HIV prevalence among long-distance truck drivers in Peru.} SAGE Open Medicine, 2017."
+) %>%
+  brief_entries(what = details, .protect = FALSE)
+```
+
+```{r}
+tribble(
+  ~ details,
+  "Egoavil MS, Condor DF, Pinazo-Vidal MA, Quezada JM, \\textbf{Fazio BM}, Bueno JC, Peña LE, Farfán J, De la Puente JG, Arce C, Malpartida B, Arostegui A, Pérez-Lu JE. \\textit{Qualitative Study for the Development of a Telemedicine System in Palliative Care.} Palliative Medicine and Hospice Care, 2017."
+) %>%
+  brief_entries(what = details, .protect = FALSE)
+```
+
+# Presentations and posters
+
+```{r}
+tribble(
+  ~ details,
+  "Bustamante MJ, \\textbf{Fazio B}, Calvo GM, Lugo E, Konda KA. \\textit{Understanding gay couples: a new vision for HIV prevention in Peru.} Poster presented at: 10th IAS Conference on HIV Science; 2019, Mexico DF."
+) %>%
+  brief_entries(what = details, .protect = FALSE)
+```
+
+```{r}
+tribble(
+  ~ details,
+  "\\textbf{Fazio B}, Bayes C, Sal y Rosas G. \\textit{Approaches to Model Specification for Regression Analysis with Correlated, Endpoint-Inflated Bounded Count Data.} Poster presented at: 
+VI Latin American Meeting on Bayesian Statistics; 2019, Lima."
+) %>%
+  brief_entries(what = details, .protect = FALSE)
+```
+
+# Other experience
+
+```{r}
+tribble(
+  ~ position, ~ company, ~ loc, ~ dates, ~ details,
+  "Platform manager", fbvl, limape, "Jan. 2021 - Current",
+  "Gathering functional requirements from non-technical policy design teams for an in-house app created to monitor local governments' management of public health interventions. Designing app mockups and carrying out usability tests to improve user experience. Developing Shiny apps and Tableau dashboards for various data processing and monitoring tasks.",
+  
+  "Data visualization consultant", giz, limape, "Jul. 2020 - Dic. 2020",
+  "Developed a set of Tableau dashboards to monitor and compare performance across local governments on key indicators.",
+  
+  "Information analyst", pcm, limape, "Sep. 2019 - May 2020",
+  "Reported periodically on the progress of key government interventions based on survey and administrative data as well as interviews with key personnel. Wrote Terms of Reference for procurement of impact evaluation and data collection consultancy services.",
+
+  "Measurement analyst", unicef, limape, "Aug. 2018 - Jul. 2019",
+  "Conducted a literature review on the measurement of adolescent well-being. Assisted in the design and calculation of an adolescent well-being index based on administrative and survey data",
+  
+  "Data analyst", minsa, limape, "Oct. 2016 - May 2018",
+  "Developed R and SQL scripts to generate reports on various health statistics.",
+) %>% 
+  detailed_entries(company, dates, position, loc, details)
+```
+
+# Skills
+
+\begin{cvskills}
+\cvskill{Languages}{Spanish (native), English (fluent)}
+\cvskill{R packages}{tidyverse, shiny, survey, targets, brms, cmdstanr, lavaan, RSelenium}
+\cvskill{Other tools}{SQL, git, Tableau}
+\end{cvskills}

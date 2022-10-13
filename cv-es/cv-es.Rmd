@@ -2,7 +2,7 @@
 name: Boris Fazio
 position: "Analista de Datos"
 address: "Métodos cuantitativos aplicados a salud pública e investigación biomédica"
-phone: +51 987 807 758
+phone: +49 1521 7143232
 #www: bmfazio.github.io
 email: "boris.fazio@outlook.com"
 #twitter: bmfazio
@@ -29,11 +29,12 @@ midis <- "Ministerio de Desarrollo e Inclusión Social"
 faspa <- "Facultad de Salud Pública y Administración"
 giz   <- "Cooperación Alemana al Desarrollo -- Agencia de la GIZ en el Perú"
 fbvl  <- "Fundación Bernard van Leer"
+ustu  <- "Universidad de Stuttgart"
 
 m_stat <- "Magíster en Estadística"
 m_stat.date <- "Abril 2021"
-# m_epid <- "Egresado de Maestría en Investigación Epidemiológica"
-# m_epid.date <- "Mar. 2015 - Dic. 2015"
+m_epid <- "Maestría en Investigación Epidemiológica (egresado)"
+m_epid.date <- "Diciembre 2015"
 b_biol <- "Bachiller en Ciencias con mención en Biología"
 b_biol.date <- "Julio 2015"
 ```
@@ -43,12 +44,15 @@ b_biol.date <- "Julio 2015"
 ```{r}
 tribble(
   ~ position, ~ company, ~ loc, ~ dates, ~ details,
-  "Especialista en gestión territorial", fbvl, limape, "Ene. 2021 - Nov 2021",
-  'Nexo entre equipo de diseño de políticas y equipo de desarrollo para el recojo e implementación de necesidades del aplicativo de la Estrategia de Gestión Territorial "Primero la Infancia" (EGTPI)',
-  "Especialista en gestión territorial", fbvl, limape, "Ene. 2021 - Presente",
-  "Elaboración de tableros de control con Tableau y aplicativos Shiny para la generación de reportes automáticos",
-  "Especialista en gestión territorial", fbvl, limape, "Ene. 2021 - Presente",
-  "Evaluación de la usabilidad y experiencia de usuario en el aplicativo EGTPI",
+    "Investigador doctoral", ustu, limape, "Oct. 2022 - Presente",
+  'Desarrollo y evaluación de modelos estadísticos en el marco del proyecto "Modelos Bayesianos Distribucionales para Variables Latentes"',
+  
+  "Especialista en seguimiento y asistencia técnica", fbvl, limape, "Ene. 2021 - Abr. 2021",
+  'Apoyo en el proceso de diseño de indicadores para el seguimiento de la Estrategia de Gestión Territorial "Primero la Infancia" (EGTPI)',
+  "Especialista en seguimiento y asistencia técnica", fbvl, limape, "Ene. 2021 - Abr. 2021",
+  "Elaboración de tableros de control con Tableau y aplicativos Shiny para la generación de reportes automáticos de seguimiento",
+  "Especialista en seguimiento y asistencia técnica", fbvl, limape, "Ene. 2021 - Abr. 2021",
+  "Aplicación de metodologías cualitativas para el recojo y análisis de las experiencias de los actores involucrados en la EGTPI",
   
   "Consultor en gestión de información", giz, limape, "Jul. 2020 - Dic. 2020",
   "Desarrollo de tableros de control Tableau para el Premio Nacional Sello Municipal",
@@ -107,16 +111,19 @@ tribble(
 tribble(
   ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
   m_stat, pucp, limape, m_stat.date, NA,
-#  "Primer puesto, tesis con mención sobresaliente",
-  # m_epid, upch, limape, m_epid.date,
-  # NA,
+  #m_epid, upch, limape, m_epid.date,
+  #NA,
   b_biol, upch, limape, b_biol.date,
   NA
 ) %>% 
   detailed_entries(uni, dates, degree, loc, details)
 ```
 
- 
+\pagebreak
+
+\begin{cvskills}
+\newline
+\end{cvskills}
 
 # Conocimientos
 
