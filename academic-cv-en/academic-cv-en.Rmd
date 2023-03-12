@@ -1,8 +1,8 @@
 ---
 name: Boris Fazio
-position: "Data Analyst"
-address: "Quantitative methods for public health and biomedical research"
-phone: +51 987 807 758
+position: "PhD Researcher"
+address: "Bayesian Latent Variable Models"
+phone: +49 1521 714 3232
 #www: bmfazio.github.io
 email: "boris.fazio@outlook.com"
 #twitter: bmfazio
@@ -62,7 +62,10 @@ tribble(
 ```{r}
 tribble(
     ~ position, ~ company, ~ loc, ~ dates, ~ details,
-  "Freelance statistical consultant", "Independent", limape, "Jul. 2018 - Present",
+  "PhD Researcher", "University of Stuttgart", limape, "Oct. 2022 - Present",
+  "Development and evaluation of statistical models for DFG-funded project 'Bayesian Distributional Latent Variable Models'.",
+
+  "Freelance statistical consultant", "Independent", limape, "Jul. 2018 - Mar. 2022",
   "Have taken various paid and unpaid opportunities to advise researchers on issues of study design, sample size calculation, selection of study-appropriate methods for statistical analysis and responses to reviewer comments regarding statistical methods.",
   
   "Research assistant", ciisss, limape, "Sep. 2015 - Oct. 2016",
